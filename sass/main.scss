@@ -1,0 +1,821 @@
+@charset "UTF-8";
+
+@use 'abstracts/mixins' as *;
+
+// 1. Vendors
+@use 'vendors/normalize';
+
+// 2. Base stuff
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/helpers';
+@use 'base/typography';
+
+// 3. Layout-related sections
+@use 'layout/footer';
+@use 'layout/header';
+
+// 4. Components
+@use 'components/button';
+
+// 5. Pages
+@use 'pages/home';
+
+// 6. Themes
+@use 'themes/default';
+
+
+
+:root {
+    --primary-color: #D5966C;
+    --secondary-color: #151515;
+    --gray-color: #444444;
+    --white-color: #FFFFFF;
+    --primary-font: "Big Shoulders", sans-serif;
+    --secondary-font: "Outfit", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .firstsection {
+        max-width: 768px;
+        height: 630px;
+        margin-left: 0 auto;
+      }
+    
+    .firstsection .firstimg {
+        width: 375px;
+        height: 240px;
+        overflow: hidden;
+      }
+    
+    .firstsection div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
+    .firstsection h1 {
+        font-family: var(--primary-font);
+        width: 343px;
+        height: 110px;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 55px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+        margin: 32px 16px;
+    }
+    .firstsection p{
+        font-family: var(--secondary-font);
+        color: var(--gray-color);
+        width: 343px;
+        height: 112px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;        
+        margin: 32px 16px;
+    }
+
+    .firstsection .divbutton {
+        width: 260px;
+        height: 72px;
+        margin-left: 16px;
+        margin-top: 32px;
+        display: flex;
+    }
+
+    .firstsection .divbutton button {
+        width: 204px;
+        height: 72px;
+    }
+
+    .firstsection .divbutton button span{
+        width: 137px;
+        height: 24px;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 3.64px;
+    }
+
+    .firstsection .divbutton div {
+        width: 56px;
+        height: 72px;  
+        background-color: var(--primary-color); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .firstsection .divbutton div img{
+        width: 8px;
+        height: 24px;
+        border-width: 1px;
+    }
+
+    .firstsection button {
+        font-family: var(--primary-font);
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+    }
+
+    .secondsection {
+        width: 343px;
+        height: 1605px;
+        margin: 120px 16px 0 16px;
+        margin-bottom: 120px;
+    }
+
+    .secondsection .secondimg {
+        width: 100%; 
+        aspect-ratio: 343 / 320;
+        overflow: hidden;
+      }
+    
+    .secondsection div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
+    .secondsection h1 {
+        font-family: var(--primary-font);
+        width: 343px;
+        height: 90px;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 45px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+    }
+
+    .secondsection .firstP{
+        font-family: var(--secondary-font);
+        color: var(--gray-color);
+        width: 343px;
+        height: 112px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        margin-bottom: 32px;       
+    }
+    .secondsection div img{
+        margin-bottom: 16px;
+    }
+
+    .finish-div {
+        background-color: var(--secondary-color);
+        width: 343px;
+        height: 293px;
+        padding: 48px 24px ;
+    }
+
+    .finish-div div {
+        width: 295px;
+        height: 198px;
+        
+    }
+
+    .finish-div div h1 {
+        width: 295px;
+        height: 90px;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 45px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--white-color);
+        margin: auto;
+    }
+    .finishP {
+        color: var(--white-color);
+        width: 295px;
+        height: 84px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+         
+    }
+
+    .ContactSocial{
+        background-color: var(--secondary-color);
+        width: 375;
+        height: 336;       
+        padding: 48px 32px;
+    }
+
+
+    .ContactSocial div {
+        width: 311px;
+        height: 240px;
+        
+    }
+
+    .ContactSocial img {
+        width: 110.0499038696289px;
+        height: 40px;
+
+    }
+    .ContactSocial div p {
+        width: 311px;
+        height: 104px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0px;
+        color: var(--white-color);    
+        margin-top: 38px;
+        margin-bottom: 38px;
+    }
+    .ContactSocial nav {
+        width: 100px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        gap: 20px;
+    }
+    .ContactSocial nav a img {
+        width: 20px;
+        height: 20px;
+
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1439px) {
+
+
+    .firstsection {
+        width: 778px;
+        height: 700px;
+    }
+
+    .firstsection .firstimg {
+        width: 437px;
+        height: 700px;
+        overflow: hidden;
+      }
+    
+    .firstsection div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
+      .firstsection h1 {
+        font-family: var(--primary-font);
+        position: relative;
+        top: -590px;
+        left: 369px;
+        width: 339px;
+        height: 130px;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 55px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+        margin: 32px 16px;
+    }
+
+    .firstsection p{
+        font-family: var(--secondary-font);
+        color: var(--gray-color);
+        position: relative;
+        top: -582px;
+        left: 369px;
+        width: 339px;
+        height: 112px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;        
+        margin: 32px 16px;
+    }
+
+    .firstsection .divbutton {
+        width: 260px;
+        height: 72px;
+        position: relative;
+        top: -572px;
+        left: 369px;
+        margin-left: 16px;
+        margin-top: 32px;
+        display: flex;
+    }
+
+    .firstsection .divbutton button {
+        width: 204px;
+        height: 72px;
+    }
+
+    .firstsection .divbutton button span{
+        width: 137px;
+        height: 24px;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 3.64px;
+    }
+
+    .firstsection .divbutton div {
+        width: 56px;
+        height: 72px;  
+        background-color: var(--primary-color); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .firstsection .divbutton div img{
+        width: 8px;
+        height: 24px;
+        border-width: 1px;
+    }
+
+    .firstsection button {
+        font-family: var(--primary-font);
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+    }
+    .secondsection {
+        width: 689px;
+        height: 1131px;
+        margin: 120px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+
+    .secondsection .firstdiv {
+        width: 689px;
+        height: 400px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items:flex-start;
+        justify-content: start;
+        gap: 68px;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .secondsection .secondimg {
+        width: 398px;
+        height: 400px;
+        aspect-ratio: 343 / 320;
+        overflow: hidden;
+      }
+    
+    .secondsection div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
+      .secondsection .divsecondsect {
+        width: 223px;
+        height: 299px;
+      }
+
+      .secondsection h1 {
+        font-family: var(--primary-font);
+        width: 223px;
+        height: 135px;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 45px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+    }
+
+    .secondsection .firstP{
+        font-family: var(--secondary-font);
+        color: var(--gray-color);
+        width: 223px;
+        height: 140px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        margin-bottom: 32px;       
+    }
+
+    .secondsection .secondiv {
+        width: 689px;
+        height: 720px;
+        display: grid;
+        grid-template-columns: 398px 1fr;
+        grid-template-rows: 280px 1fr;
+        gap: 11px;
+        margin-left: 0;
+        margin-right: auto;
+        
+    }
+    .secondsection .secondivfirstimg {
+        width: 398px;
+        height: 720px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    
+        
+    }
+
+    .secondsection .secondivsecondimg {
+        width: 280px;
+        height: 313px;
+        grid-column: 2 / 2;
+        grid-row: 1 / 2;
+    }
+    .secondsection .finish-div {
+        width: 280px;
+        height: 396px;
+        grid-column: 2 / 2;
+        grid-row: 2 / 2;
+        background-color: var(--secondary-color);
+        margin-top: 33px;
+    }
+
+    .secondsection .finish-div div{
+        width: 223px;
+        height: 226px;
+        margin: 85px 29px;
+
+    }
+    .secondsection .finish-div h1{
+        width: 223px;
+        height: 90px;    
+        color: var(--white-color);
+        font-family: var(--primary-font);
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 45px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+
+    }
+    .secondsection .finish-div p{
+        width: 223px;
+        height: 112px;    
+        color: var(--white-color);
+        font-family: var(--secondary-font);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        
+    }
+
+    
+    .ContactSocial{
+        background-color: var(--secondary-color);
+        width: 768px;
+        height: 216px;       
+        padding: 56px 40px;
+    }
+
+
+    .ContactSocial div {
+        width: 689px;
+        height: 104px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ContactSocial img {
+        width: 110.0499038696289px;
+        height: 40px;
+        margin-right: 65px;
+
+    }
+    .ContactSocial div p {
+        width: 281px;
+        height: 104px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0px;
+        color: var(--white-color);
+        margin: 0; 
+    }
+    .ContactSocial nav {
+        width: 100px;
+        height: 20px;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .ContactSocial nav a img {
+        width: 20px;
+        height: 16.25px;
+        margin: 0;
+
+    }
+        
+    
+}
+
+@media (min-width: 1439px){
+    .firstsection {
+        width: 1275px;
+        height: 800px;
+    }
+
+    .firstsection .divHidden {
+        width: 450px;
+        height: 799px;
+        background-color: var(--secondary-color);
+        
+    }
+
+
+    .firstsection .firstimg {
+        width: 540px;
+        height: 800px;
+        position: absolute;
+        z-index: -10;
+        top: 0;
+        left: 450px;
+      }
+    
+    .firstsection div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
+      .firstsection h1 {
+        font-family: var(--primary-font);
+        position: relative;
+        width: 514px;
+        height: 176px;
+        top: -650px;
+        left: 155px;
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 88px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--white-color);
+    }
+
+    .firstsection p{
+        font-family: var(--secondary-font);
+        color: var(--gray-color);
+        position: relative;
+        top: -862px;
+        left: 910px;
+        width: 350px;
+        height: 160px;
+        font-family: Outfit;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 0px;
+
+    }
+
+    .firstsection .divbutton {
+        width: 260px;
+        height: 72px;
+        position: relative;
+        top: -850px;
+        left: 910px;
+        margin-left: 16px;
+        margin-top: 32px;
+        display: flex;
+    }
+
+    .firstsection .divbutton button {
+        width: 204px;
+        height: 72px;
+    }
+
+    .firstsection .divbutton button span{
+        width: 137px;
+        height: 24px;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 3.64px;
+    }
+
+    .firstsection .divbutton div {
+        width: 56px;
+        height: 72px;  
+        background-color: var(--primary-color); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .firstsection .divbutton div img{
+        width: 8px;
+        height: 24px;
+        border-width: 1px;
+    }
+
+    .firstsection button {
+        font-family: var(--primary-font);
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+    }
+
+    .secondsection {
+        width: 1110px;
+        height: 1150px;
+        margin: 180px 165px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+
+    .secondsection .firstdiv {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items:flex-start;
+        justify-content: start;
+        gap: 125px;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .secondsection .secondimg {
+        width: 635px;
+        height: 400px;
+        aspect-ratio: 600 / 635;
+        overflow: hidden;
+      }
+    
+    .secondsection div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
+      .secondsection .divsecondsect {
+        width: 350px;
+        height: 280px;
+      }
+
+      .secondsection h1 {
+        font-family: var(--primary-font);
+        width:350px;
+        height: 120px;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 60px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+    }
+
+    .secondsection .firstP{
+        font-family: var(--secondary-font);
+        color: var(--gray-color);
+        width: 350px;
+        height: 128px;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 0px; 
+    }
+
+    .secondsection .secondiv {
+        width: 635px;
+        height: 720px;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 635px 1fr;
+        grid-template-rows: 315px 1fr;
+    }
+    .secondsection .secondivfirstimg {
+        width: 635px;
+        height: 720px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    
+        
+    }
+    .secondsection .secondivsecondimg {
+        width: 445px;
+        height: 313px;
+        grid-column: 2 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .secondsection .finish-div {
+        width: 445px;
+        height: 377px;
+        grid-column: 2 / 2;
+        grid-row: 2 / 2;
+        background-color: var(--secondary-color);
+
+    }
+
+    .secondsection .finish-div div{
+        width: 350px;
+        height: 248px;
+        margin: 65px 48px;
+
+    }
+    .secondsection .finish-div h1{
+        width: 350px;
+        height: 120px;    
+        color: var(--white-color);
+        font-family: var(--primary-font);
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 65px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+
+    }
+    .secondsection .finish-div p{
+        width: 350px;
+        height: 96px;    
+        color: var(--white-color);
+        font-family: var(--secondary-font);
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        
+    }
+
+    .ContactSocial{
+        background-color: var(--secondary-color);
+        width: 1440px;
+        height: 244px;       
+        padding: 80px 165px;
+    }
+
+
+    .ContactSocial div {
+        width: 1110px;
+        height: 84px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ContactSocial img {
+        width: 159.57px;
+        height: 58px;
+        margin-right: 140px;
+
+    }
+    .ContactSocial div p {
+        width: 430px;
+        height: 84px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: var(--white-color);
+        margin: 0; 
+    }
+    .ContactSocial nav {
+        width: 100px;
+        height: 20px;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .ContactSocial nav a img {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+
+    }
+        
+    
+
+}

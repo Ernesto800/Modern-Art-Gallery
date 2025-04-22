@@ -1,0 +1,634 @@
+@charset "UTF-8";
+
+@use 'abstracts/mixins' as *;
+
+// 1. Vendors
+@use 'vendors/normalize';
+
+// 2. Base stuff
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/helpers';
+@use 'base/typography';
+
+// 3. Layout-related sections
+@use 'layout/footer';
+@use 'layout/header';
+
+// 4. Components
+@use 'components/button';
+
+// 5. Pages
+@use 'pages/home';
+
+// 6. Themes
+@use 'themes/default';
+
+
+
+:root {
+    --primary-color: #D5966C;
+    --secondary-color: #151515;
+    --gray-color: #444444;
+    --white-color: #FFFFFF;
+    --primary-font: "Big Shoulders", sans-serif;
+    --secondary-font: "Outfit", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .firstsectlocation {
+        width: 375px;
+        height: 550px;
+        overflow: hidden;
+        position: relative;
+      }
+    
+      .firstsectlocation .maps {
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0px;
+        left: -520px;
+        z-index: -10;
+      }
+    
+    
+      .firstsectlocation .maps .bitmapimg img {
+        min-width: 400px;
+        min-height: 600px; 
+        width: auto;
+        height: auto; 
+        display: block;
+      }
+    
+    .buttonback div {
+        width: 56px;
+        height: 72px;
+        background-color: var(--primary-color); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .buttonback div img {
+        width: 8;
+        height: 24;
+        top: 48px;
+        left: 32px;
+        transform: rotate(-180deg);
+        border-width: 1px;
+        
+    }
+    .buttonback {
+        width: 264px;
+        height: 72px;
+        display: flex;
+        position: relative;
+    }
+    .buttonback button {
+        width: 208px;
+        height: 72px;
+    }
+    .buttonback a button span {
+        width: 141px;
+        height: 24px;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 3.64px;
+        
+    }
+    .firstsectlocation button {
+        font-family: var(--primary-font);
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+    }
+
+
+    .firstsectlocation .punt{
+        width: 66px;
+        height: 88px;
+        margin: auto;
+        z-index: 20;
+        position: relative;
+        top: 190px;
+        left: 163px;
+    }
+
+    .secondsectlocation {
+        width: 375px;
+        height: 493px;
+        background-color: var(--secondary-color);
+        padding: 48px 16px 0 16px;
+    }
+    .secondsectlocation h1 {
+        width: 343px;
+        height: 45px;
+        padding: 0;
+        margin-top: auto;
+        margin-bottom: 48px;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 45px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--white-color);
+        font-family: var(--primary-font);
+    }
+    .secondsectlocation div {
+        width: 343px;
+        height: 296px;
+        margin-top: 0;
+        
+    }
+
+    .secondsectlocation div h2 {
+        width: 343px;
+        height: 32px;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        margin: auto;
+        color: var(--primary-color);
+        font-family: var(--primary-font);
+    }
+
+    .secondsectlocation div .locat{
+        width: 343px;
+        height: 84px;
+        font-family: var(--secondary-font);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: var(--white-color);
+        
+    }
+    .secondsectlocation div .descriptionlocat {
+        width: 343px;
+        height: 140px;
+        font-family: var(--secondary-font);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: var(--white-color);        
+    }
+
+    .ContactSocial{
+        background-color: var(--primary-color);
+        width: 375;
+        height: 336;       
+        padding: 48px 32px;
+    }
+
+
+    .ContactSocial div {
+        width: 311px;
+        height: 240px;
+        
+    }
+
+    .ContactSocial img {
+        width: 110.0499038696289px;
+        height: 40px;
+
+    }
+    .ContactSocial div p {
+        width: 311px;
+        height: 104px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0px;
+        color: var(--secondary-color);    
+        margin-top: 38px;
+        margin-bottom: 38px;
+    }
+    .ContactSocial nav {
+        width: 100px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        gap: 20px;
+    }
+    .ContactSocial nav a img {
+        width: 20px;
+        height: 20px;
+        filter: grayscale(100%) brightness(0%);
+      }
+
+}
+
+@media (min-width: 769px) and (max-width: 1439px) {
+    .firstsectlocation {
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .firstsectlocation .maps {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: -340px;
+      z-index: -10;
+    }
+  
+    .firstsectlocation .maps .bitmapimg {
+      width: auto;
+      height: 100%;
+    }
+  
+    .firstsectlocation .maps .bitmapimg img {
+      min-width: 100%; 
+      height: auto;
+      display: block;
+    }
+
+    .buttonback div {
+        width: 56px;
+        height: 72px;
+        background-color: var(--primary-color); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .buttonback div img {
+        width: 8;
+        height: 24;
+        top: 48px;
+        left: 32px;
+        transform: rotate(-180deg);
+        border-width: 1px;
+        
+    }
+    .buttonback {
+        width: 264px;
+        height: 72px;
+        display: flex;
+        position: relative;
+        margin-left: 39px;
+    }
+    .buttonback button {
+        width: 208px;
+        height: 72px;
+    }
+    .buttonback a button span {
+        width: 141px;
+        height: 24px;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 3.64px;
+        
+    }
+    .firstsectlocation button {
+        font-family: var(--primary-font);
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+    }
+
+    .firstsectlocation .punt{
+        width: 66px;
+        height: 88px;
+        margin: auto;
+        z-index: 20;
+        position: relative;
+        top: 190px;
+        left: 351px;
+    }
+
+    .secondsectlocation {
+        width: 769px;
+        height: 436px;
+        background-color: var(--secondary-color);
+        margin: 0;
+        padding-top: 88px;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secondsectlocation .secondsectlocationdiv {
+        width: 689px;
+        height: 268px;
+        display: flex;
+        gap: 68px;
+    }
+
+    .secondsectlocation h1 {
+        width: 223px;
+        height: 100px;
+        padding: 0;
+        margin-top: 0;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 45px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--white-color);
+        font-family: var(--primary-font);
+    }
+    .secondsectlocation .secondsectlocationdiv div {
+        width: 398px;
+        height: 296px;
+        margin-top: 0;
+        
+    }
+
+    .secondsectlocation .secondsectlocationdiv div h2 {
+        width: 350px;
+        height: 32px;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        margin: 0;
+        color: var(--primary-color);
+        font-family: var(--primary-font);
+    }
+
+    .secondsectlocation div .locat{
+        width: 398px;
+        height: 84px;
+        font-family: var(--secondary-font);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: var(--white-color);
+        
+    }
+    .secondsectlocation div .descriptionlocat {
+        width: 398px;
+        height: 112px;
+        font-family: var(--secondary-font);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: var(--white-color);        
+    }
+
+    .ContactSocial{
+        background-color: var(--primary-color);
+        width: 769px;
+        height: 216px;       
+        padding: 56px 40px;
+    }
+
+
+    .ContactSocial div {
+        width: 689px;
+        height: 104px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ContactSocial img {
+        width: 110.0499038696289px;
+        height: 40px;
+        margin-right: 65px;
+
+    }
+    .ContactSocial div p {
+        width: 281px;
+        height: 104px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0px;
+        color: var(--secondary-color);
+        margin: 0; 
+    }
+    .ContactSocial nav {
+        width: 100px;
+        height: 20px;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .ContactSocial nav a img {
+        width: 20px;
+        height: 16.25px;
+        margin: 0;
+        filter: grayscale(100%) brightness(0%);
+    }
+      
+  }
+
+  @media (min-width: 1439px){
+    .firstsectlocation {
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        position: relative;
+      }
+    
+      .firstsectlocation .maps {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        z-index: -10;
+      }
+    
+      .firstsectlocation .maps .bitmapimg {
+        width: auto;
+        height: 100%;
+      }
+    
+      .firstsectlocation .maps .bitmapimg img {
+        min-width: 100%; 
+        height: auto;
+        display: block;
+      }
+
+      .buttonback div {
+        width: 56px;
+        height: 72px;
+        background-color: var(--primary-color); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .buttonback div img {
+        width: 8;
+        height: 24;
+        top: 48px;
+        left: 32px;
+        transform: rotate(-180deg);
+        border-width: 1px;
+        
+    }
+    .buttonback {
+        width: 264px;
+        height: 72px;
+        display: flex;
+        position: relative;
+        margin-left: 156px;
+    }
+    .buttonback button {
+        width: 208px;
+        height: 72px;
+    }
+    .buttonback a button span {
+        width: 141px;
+        height: 24px;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 3.64px;
+        
+    }
+    .firstsectlocation button {
+        font-family: var(--primary-font);
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+    }
+
+    .firstsectlocation .punt{
+        width: 66px;
+        height: 88px;
+        margin: auto;
+        z-index: 20;
+        position: relative;
+        top: 190px;
+        left: 690px;
+    }
+
+    .secondsectlocation {
+        width: 1440px;
+        height: 548px;
+        background-color: var(--secondary-color);
+        margin: 0;
+        padding-top: 88px;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 104px 165px;
+    }
+
+    .secondsectlocation .secondsectlocationdiv {
+        width: 1110px;
+        height: 316px;
+        display: flex;
+        gap: 220px;
+        margin: 0;
+        
+
+    }
+
+    .secondsectlocation h1 {
+        width: 350px;
+        height: 140px;
+        padding: 0;
+        margin-top: 0;
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 75px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--white-color);
+        font-family: var(--primary-font);
+    }
+    .secondsectlocation .secondsectlocationdiv div {
+        width: 445px;
+        height: 156px;
+
+        
+    }
+
+    .secondsectlocation .secondsectlocationdiv div h2 {
+        width: 350px;
+        height: 36px;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        margin: 0;
+        color: var(--primary-color);
+        font-family: var(--primary-font);
+    }
+
+    .secondsectlocation div .locat{
+        width: 445px;
+        height: 96px;
+        font-family: var(--secondary-font);
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        color: var(--white-color);
+        margin: 0;
+        
+    }
+    .secondsectlocation div .descriptionlocat {
+        width: 540px;
+        height: 128px;
+        font-family: var(--secondary-font);
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        color: var(--white-color);        
+    }
+
+    
+    .ContactSocial{
+        background-color: var(--primary-color);
+        width: 1440px;
+        height: 244px;       
+        padding: 80px 165px;
+    }
+
+
+    .ContactSocial div {
+        width: 1110px;
+        height: 84px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ContactSocial img {
+        width: 159.57px;
+        height: 58px;
+        margin-right: 140px;
+
+    }
+    .ContactSocial div p {
+        width: 430px;
+        height: 84px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: var(--secondary-color);
+        margin: 0; 
+    }
+    .ContactSocial nav {
+        width: 100px;
+        height: 20px;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .ContactSocial nav a img {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        filter: grayscale(100%) brightness(0%);
+    }
+     
+
+  }
